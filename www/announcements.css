@@ -1,0 +1,58 @@
+.ann-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+}
+.badges-right{display:flex; gap:8px; align-items:center}
+.badge{
+  display:inline-flex; align-items:center; gap:6px;
+  padding:6px 10px; border-radius:999px; font-size:12px; font-weight:800;
+  background:#f2f2f2; color:#333;
+}
+.badge .ms{font-size:18px}
+.badge.pin    { background:#FFE3E6; color:#8E1220; }
+.badge.new    { background:#E8F2FF; color:#0A51B7; }
+.badge.event  { background:#FFF4CC; color:#9A7A00; }
+.badge.update { background:#E6F7E9; color:#187A2F; }
+.badge.class  { background:#F5E6FF; color:#6C2EB9; }
+
+.badge.date{
+  background:#fff; color:#74768F; border:1px solid rgba(0,0,0,.08);
+}
+.ann-card.pinned{
+  outline:2px solid #FFD3D7;
+  box-shadow:0 10px 24px rgba(234,69,76,.12);
+}
+.ann-card .article-title{ font-size:21px; }
+.ann-card .article-excerpt{ font-size:15.5px; }
+.articles{
+  max-width:1100px;margin:22px auto 48px; padding:0 20px;
+  display:grid;gap:var(--gap);
+  grid-template-columns: repeat(12, 1fr);
+}
+.article-card{
+  grid-column: span 6; 
+  background:var(--card-bg);border-radius:16px;box-shadow:var(--card-shadow);
+  padding:20px;display:flex;flex-direction:column;gap:12px;min-height:160px;
+  transition: transform .06s ease, box-shadow .2s ease;
+}
+.article-card:hover{transform:translateY(1px);box-shadow:0 10px 24px rgba(0,0,0,.12)}
+.article-meta{
+  display:flex;gap:10px;align-items:center;color:var(--ink-600);font-size:14px
+}
+.article-meta .dot{width:4px;height:4px;border-radius:50%;background:#bbb}
+.article-title{
+  font-size:22px;line-height:1.25;font-weight:700;color:#1d1d1f
+}
+.article-excerpt{color:#4d4f5c;font-size:16px;line-height:1.45}
+.article-actions{margin-top:auto;display:flex;gap:10px;justify-content:space-between;align-items:center}
+.read-btn{
+  display:inline-flex;align-items:center;gap:8px;background:var(--primary-red);color:#fff;border:none;border-radius:12px;
+  padding:10px 14px;font-weight:700;cursor:pointer;text-decoration:none
+}
+.read-btn:hover{filter:brightness(.96)}
+.tag{
+  background:#f2f2f2;color:#333;padding:6px 10px;border-radius:10px;font-size:12px;font-weight:600
+}
+

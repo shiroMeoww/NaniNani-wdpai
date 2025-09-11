@@ -1,0 +1,142 @@
+.notes-page{
+  max-width:1100px;
+  margin:10px auto 48px;
+  padding:0 20px;
+  display:flex;
+  flex-direction:column;
+  gap:22px;
+}
+
+.note-composer{
+  background:#fff;
+  border-radius:16px;
+  box-shadow:0 6px 18px rgba(0,0,0,.08);
+  padding:18px;
+}
+
+.composer-form{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.composer-form textarea{
+  width:100%;
+  resize:vertical;
+  min-height:120px;
+  border:1px solid rgba(0,0,0,.12);
+  border-radius:12px;
+  padding:12px;
+  font-size:15px;
+  outline:none;
+}
+
+.composer-form textarea:focus{
+  border-color:#EA454C;
+  box-shadow:0 0 0 3px rgba(234,69,76,.12);
+}
+
+.composer-actions{
+  display:flex;
+  gap:10px;
+  justify-content:flex-end;
+}
+
+.btn-primary{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  text-decoration:none;
+  background:#EA454C;
+  color:#fff;
+  padding:10px 14px;
+  border-radius:12px;
+  font-weight:800;
+  border:none;
+  cursor:pointer;
+}
+
+.btn-primary:hover{ filter:brightness(.96); }
+
+.notes-list{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+}
+
+.empty-state{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:#74768F;
+  background:#fff;
+  border:1px dashed rgba(0,0,0,.12);
+  border-radius:12px;
+  padding:14px 16px;
+  font-weight:600;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns: repeat(12,1fr);
+  gap:22px;
+}
+
+.note-card{
+  grid-column: span 6;
+  background:#fff;
+  border-radius:16px;
+  box-shadow:0 6px 18px rgba(0,0,0,.08);
+  padding:16px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.note-meta{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  color:#74768F;
+  font-size:13px;
+}
+
+.note-content{
+  color:#1d1d1f;
+  font-size:15px;
+  line-height:1.6;
+  white-space:pre-wrap;
+  word-break:break-word;
+}
+
+.note-actions{
+  display:flex;
+  gap:8px;
+  justify-content:flex-end;
+  margin-top:auto;
+}
+
+.btn-light{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding:8px 10px;
+  border-radius:10px;
+  text-decoration:none;
+  background:#fff;
+  border:1px solid rgba(0,0,0,.12);
+  color:#333;
+  font-weight:700;
+}
+
+.btn-light:hover{ background:#fff9f9; }
+.level-hero{
+  max-width:1100px;margin:32px auto 0; padding:0 20px;
+}
+
+.level-title h1{
+  font-size:34px;line-height:1.1;color:var(--ink-800);font-weight:700
+}
+@media(max-width:900px){
+  .note-card{ grid-column: span 12; }
+}

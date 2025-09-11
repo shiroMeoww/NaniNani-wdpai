@@ -1,0 +1,109 @@
+.visually-hidden{
+  position:absolute !important;
+  clip:rect(1px,1px,1px,1px);
+  padding:0;border:0;height:1px;width:1px;overflow:hidden;white-space:nowrap;
+}
+
+.white-icon{color:#fff}
+.red-icon{color:var(--primary-red)}
+
+.big-human{font-size:180px}   
+.big-book{font-size:120px}      
+.big-calendar{font-size:90px}   
+
+main{
+  margin:0 auto;
+  padding:var(--gap);
+  display:grid;gap:var(--gap);
+  grid-template-columns:1fr 1fr 1fr;
+}
+.column{display:flex;flex-direction:column;gap:var(--gap)}
+
+.section{background:#fff;border-radius:18px;padding:26px;box-shadow:0 6px 18px rgba(0,0,0,.08);
+  height:var(--card-h);display:flex;flex-direction:column;justify-content:space-between}
+.section-title{color:var(--primary-red);font-weight:600;font-size:28px}
+.section-title.center{text-align:center}
+.section-title.white{color:#fff}
+
+.profile{background:#D8D8D8;height:calc(var(--card-h)*2 + var(--gap));padding:28px}
+.profile form{
+  margin:0;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+.profile textarea.about-me-input{margin:0}
+.profile .big-button{margin-top:14px}
+
+.avatar-wrap{display:flex;justify-content:center}
+.avatar-circle{width: clamp(220px, 34vw, 320px);aspect-ratio:1/1;background:#fff;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;margin-bottom:22px;box-shadow:0 4px 10px rgba(0,0,0,.08)}
+
+.about-me-input{
+  flex:1;
+  width:100%;
+  background:#fff;
+  border:1px solid #ECECEC;
+  border-radius:16px;
+  padding:18px 20px;
+  font-size:18px;
+  color:var(--ink-600);
+  box-shadow:0 4px 10px rgba(0,0,0,.08);
+  resize:none;
+  outline:none;
+  transition: border-color .2s ease, box-shadow .2s ease, transform .06s ease;
+}
+.about-me-input::placeholder{color:#A4A6B8}
+.about-me-input:focus{
+  border-color:var(--primary-red);
+  box-shadow:0 6px 18px rgba(234,69,76,.18);
+}
+
+.card-icon{display:flex;justify-content:center;align-items:center;margin-top:4px}
+.icon-star-shine{width:86px;height:86px;fill:#fff;display:block}
+
+.progress-section{background:var(--off)}
+.progress-row{display:flex;align-items:center;gap:16px}
+.level{font-size:28px;color:var(--primary-red);white-space:nowrap}
+.progress-bar{flex:1;height:28px;border-radius:999px;background:var(--track);overflow:hidden}
+.progress-fill{height:100%;background:var(--primary-red)}
+
+.homework-section{background:var(--red-soft)}
+.announcements-section{background:var(--red-mid);color:#fff}
+.calendar-section{background:var(--red-strong);color:#fff}
+
+.big-button{
+  width:100%;
+  border:none;border-radius:14px;background:var(--primary-red);color:#fff;
+  padding:16px 18px;font-size:20px;font-weight:700;display:flex;align-items:center;justify-content:center;gap:10px;cursor:pointer;
+  transition: background .2s ease, transform .06s ease, box-shadow .2s ease;
+  box-shadow:0 4px 12px rgba(0,0,0,.12);
+  will-change: transform;
+}
+
+.big-button:hover{background:#d93a41}
+.big-button:active{transform: translateY(1px)}
+
+.homework-section .big-button{background:var(--primary-red);color:#fff}
+.homework-section .big-button:hover{background:#d93a41}        /* DODANE */
+
+.announcements-section .big-button,
+.calendar-section .big-button{
+  background:var(--btn-light);color:var(--btn-light-text)
+}
+.announcements-section .big-button:hover,
+.calendar-section .big-button:hover{
+  background:var(--btn-light-hover)
+}
+
+@media (max-width:1120px){
+  main{grid-template-columns:1fr 1fr}
+  .column:first-child{grid-column: span 2}
+  .profile{height:calc(var(--card-h) + 340px)}
+}
+@media (max-width:820px){
+  main{grid-template-columns:1fr}
+  .column:first-child{grid-column:auto}
+  :root{--card-h: clamp(240px, 36vh, 340px)}
+}
