@@ -1,19 +1,19 @@
      <main>
    <section class="level-hero">
       <nav class="level-nav hw-filters">
-        <a href="#" class="active">Wszystkie</a>
-        <a href="#">Do zrobienia</a>
-        <a href="#">W toku</a>
-        <a href="#">Zrobione</a>
-        <a href="#">N5</a>
-        <a href="#">N4</a>
-        <a href="#">N3</a>
-        <a href="#">N2</a>
-        <a href="#">N1</a>
+        <a href="#" class="active" data-filter="all" data-filter-type="all">Wszystkie</a>
+        <a href="#" data-filter="todo" data-filter-type="status">Do zrobienia</a>
+        <a href="#" data-filter="doing" data-filter-type="status">W toku</a>
+        <a href="#" data-filter="done" data-filter-type="status">Zrobione</a>
+        <a href="#" data-filter="N5" data-filter-type="level">N5</a>
+        <a href="#" data-filter="N4" data-filter-type="level">N4</a>
+        <a href="#" data-filter="N3" data-filter-type="level">N3</a>
+        <a href="#" data-filter="N2" data-filter-type="level">N2</a>
+        <a href="#" data-filter="N1" data-filter-type="level">N1</a>
       </nav>
     </section>
     <section class="articles tasks-grid">
-      <article class="article-card task-card">
+      <article class="article-card task-card" data-status="todo" data-level="N3">
         <div class="task-head">
           <span class="task-level tag tag-level">N3</span>
           <span class="task-status tag tag-status todo">Do zrobienia</span>
@@ -32,7 +32,7 @@
           <div class="progress-wrap"><div class="progress-bar"><div class="progress-fill" style="width: 0%"></div></div></div>
         </div>
       </article>
-      <article class="article-card task-card">
+      <article class="article-card task-card" data-status="doing" data-level="N2">
         <div class="task-head">
           <span class="task-level tag tag-level">N2</span>
           <span class="task-status tag tag-status doing">W toku</span>
@@ -51,7 +51,7 @@
           <div class="progress-wrap"><div class="progress-bar"><div class="progress-fill" style="width: 45%"></div></div></div>
         </div>
       </article>
-      <article class="article-card task-card">
+      <article class="article-card task-card" data-status="done" data-level="N5">
         <div class="task-head">
           <span class="task-level tag tag-level">N5</span>
           <span class="task-status tag tag-status done">Zrobione</span>
@@ -70,7 +70,7 @@
           <div class="progress-wrap"><div class="progress-bar"><div class="progress-fill" style="width: 100%"></div></div></div>
         </div>
       </article>
-      <article class="article-card task-card">
+      <article class="article-card task-card" data-status="todo" data-level="N1">
         <div class="task-head">
           <span class="task-level tag tag-level">N1</span>
           <span class="task-status tag tag-status todo">Do zrobienia</span>
@@ -99,3 +99,34 @@
       </article>-->
     </section>
     </main>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const filterLinks = document.querySelectorAll('.hw-filters a');
+        const taskCards = document.querySelectorAll('.task-card');
+
+        function applyFilter(type, value) {
+          taskCards.forEach(card => {
+            if (type === 'all') {
+              card.style.display = '';
+              return;
+            }
+
+            const cardValue = card.dataset[type]?.toLowerCase();
+            card.style.display = cardValue === value ? '' : 'none';
+          });
+        }
+
+        filterLinks.forEach(link => {
+          link.addEventListener('click', event => {
+            event.preventDefault();
+            filterLinks.forEach(l => l.classList.remove('active'));
+            link.classList.add('active');
+
+            const filterType = link.dataset.filterType;
+            const filterValue = link.dataset.filter?.toLowerCase();
+            applyFilter(filterType, filterValue);
+          });
+        });
+      });
+    </script>

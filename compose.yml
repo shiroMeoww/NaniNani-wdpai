@@ -11,16 +11,26 @@ services:
       - php-fpm
     links:
       - php-fpm
+    networks:
+      - app_network
 
   db:
-    image: postgres:alpine
+    image: postgres:17-alpine
     ports:
       - 5438:5432
     env_file:
       - .env
     volumes:
-      - ./postgres/data:/var/lib/postgresql/data
+      - postgres_data:/var/lib/postgresql/data
       - ./postgres/init.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "postgres"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+      start_period: 10s
+    networks:
+      - app_network
 
   php-fpm:
     image: joseluisq/php-fpm:8.4
@@ -35,3 +45,14 @@ services:
       - "9090"
     volumes:
       - ./www:/usr/share/nginx/html/
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - app_network
+
+volumes:
+  postgres_data:
+
+networks:
+  app_network:

@@ -85,3 +85,16 @@
     </section>
   </div>
 </main>
+
+<script>
+  document.querySelectorAll('.days-grid div, .hour-options div, .course-grid div').forEach(el => {
+    el.addEventListener('click', () => {
+      if (el.closest('.course-grid')) {
+        document.querySelectorAll('.course-grid div').forEach(item => item.classList.remove('selected'));
+        el.classList.add('selected');
+      } else {
+        el.classList.toggle('selected');
+      }
+    });
+  });
+</script>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img" aria-labelledby="title">
+  <title>Aiko Tanaka</title>
+  <rect width="320" height="240" rx="24" fill="#F5E5E8" />
+  <circle cx="160" cy="88" r="56" fill="#F9D7E0" />
+  <path d="M110 108c0-34 22-60 50-60s50 26 50 60" fill="#362E2C" />
+  <path d="M110 108c0 32 22 60 50 60s50-28 50-60" fill="#1A1110" opacity="0.18" />
+  <path d="M150 105c0-6 12-6 12 0v16h-12z" fill="#F9D7E0" />
+  <path d="M148 98c5 0 11-8 11-14s-6-9-11-9-11 2-11 9 6 14 11 14z" fill="#F9D7E0" />
+  <path d="M126 100c4 5 10 6 15 1" stroke="#3C2E2B" stroke-width="3" fill="none" stroke-linecap="round" />
+  <path d="M196 100c-4 5-10 6-15 1" stroke="#3C2E2B" stroke-width="3" fill="none" stroke-linecap="round" />
+  <path d="M134 128c8 12 34 12 42 0" stroke="#7B4B3A" stroke-width="4" fill="none" stroke-linecap="round" />
+  <path d="M112 144c24 28 92 28 116 0" stroke="#362E2C" stroke-width="12" fill="none" stroke-linecap="round" />
+  <circle cx="126" cy="98" r="6" fill="#3C2E2B" />
+  <circle cx="194" cy="98" r="6" fill="#3C2E2B" />
+  <path d="M90 132c14-20 48-26 80-26s66 8 80 26" fill="#F9D7E0" />
+  <path d="M105 168c0-24 26-40 55-40s55 16 55 40v18h-110z" fill="#D9B6C0" />
+</svg>

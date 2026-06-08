@@ -71,3 +71,9 @@ create table if not exists "studentGroup" (
 
     constraint "pk_studentGroup" primary key ("studentId", "groupUid")
 );
+insert into "group" (name, description, level) values
+  ('Początkujący N5', 'Grupa dla zupełnych początkujących', 1),
+  ('Podstawowy N4', 'Podstawowa gramatyka i słownictwo', 2),
+  ('Średni N3', 'Średniozaawansowany japoński', 3),
+  ('Zaawansowany N2', 'Zaawansowana gramatyka i kanji', 4),
+  ('Ekspercki N1', 'Najwyższy poziom biegłości', 5);

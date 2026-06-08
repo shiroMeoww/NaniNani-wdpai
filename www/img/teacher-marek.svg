@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img" aria-labelledby="title">
+  <title>Marek Nowak</title>
+  <rect width="320" height="240" rx="24" fill="#E8F1FA" />
+  <circle cx="160" cy="92" r="56" fill="#F2D9B1" />
+  <path d="M120 118c0-32 20-54 40-54s40 22 40 54" fill="#2D2C28" />
+  <path d="M120 118c0 30 20 54 40 54s40-24 40-54" fill="#181714" opacity="0.18" />
+  <rect x="118" y="118" width="84" height="64" rx="34" fill="#F2D9B1" />
+  <path d="M128 148c20 18 64 18 84 0" stroke="#4A3A2A" stroke-width="10" fill="none" stroke-linecap="round" />
+  <path d="M128 94c10-6 20-12 32-12s22 6 32 12" stroke="#2D2C28" stroke-width="8" fill="none" stroke-linecap="round" />
+  <path d="M118 122c0 14 24 32 52 32s52-18 52-32" fill="#F2D9B1" />
+  <path d="M128 96c0 8 8 14 18 14s18-6 18-14" stroke="#2D2C28" stroke-width="5" fill="none" stroke-linecap="round" />
+  <path d="M125 132c10 10 34 10 44 0" stroke="#4A3A2A" stroke-width="4" fill="none" stroke-linecap="round" />
+  <circle cx="134" cy="98" r="6" fill="#2D2C28" />
+  <circle cx="186" cy="98" r="6" fill="#2D2C28" />
+  <path d="M96 150c16-24 72-26 104 0" fill="#CBD5E2" />
+</svg>

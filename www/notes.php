@@ -1,19 +1,5 @@
 <?php
-  require_once "./component/db.php";
-  /** @var PDO $pdo */
-  global $pdo;
-  $query = $pdo->prepare("select id from \"student\" where \"userUid\" = ?");
-  $query->execute([$_SESSION["uid"]]);
-  $res = $query->fetch(PDO::FETCH_ASSOC);
-  if ($res) {
-    $id = $res["id"];
-  } else {
-    die();
-  }
-  if ($_POST["content"]) {
-    $query = $pdo->prepare("insert into \"note\" (\"studentId\", \"content\") values (?, ?)");
-    $query->execute([$id, $_POST["content"]]);
-  }
+// Controller passes variables: $notes and $studentId
 ?>
 <main>
   <section class="level-hero">
@@ -33,35 +19,18 @@
     </section>
 
     <section class="notes-list">
-      <?php
-        $query = $pdo->prepare("select content from \"note\" where \"studentId\" = ? order by id desc");
-        $query->execute([$id]);
-        $res = $query->fetchAll();
-        if (!count($res)) {
-          ?>
+      <?php if (count($notes) === 0): ?>
           <div class="empty-state">
             <span class="ms">sticky_note_2</span>
             Brak notatek. Dodaj pierwszą powyżej.
           </div>
-          <?php
-        } else {
-          ?>
+      <?php else: ?>
           <div class="cards">
-          <?php
-            foreach ($res as $card) {
-              ?>
-              <div class="note-card">
-              <?php
-              echo $card["content"];
-              ?>
-              </div>
-              <?php
-            }
-          ?>
+          <?php foreach ($notes as $card): ?>
+              <div class="note-card"><?php echo View::escape((string)$card['content']); ?></div>
+          <?php endforeach; ?>
           </div>
-          <?php
-        }
-      ?>
+      <?php endif; ?>
     </section>
   </div>
 </main>

@@ -1,20 +1,5 @@
 <?php
-  require_once "./component/db.php";
-  /** @var PDO $pdo */
-  global $pdo;
-  $query = $pdo->prepare("select id from \"student\" where \"userUid\" = ?");
-  $query->execute([$_SESSION["uid"]]);
-  $res = $query->fetch(PDO::FETCH_ASSOC);
-  if ($res) {
-    $id = $res["id"];
-  }
-  if (array_key_exists("about", $_POST)) {
-    $query = $pdo->prepare("update \"user\" set description = ? where uid = ?");
-    $query->execute([$_POST["about"], $_SESSION["uid"]]);
-  }
-  $query = $pdo->prepare("select * from \"user\" where uid = ?");
-  $query->execute([$_SESSION["uid"]]);
-  $res = $query->fetch(PDO::FETCH_ASSOC);
+// Controller passes variables: $description and $studentId
 ?>
 <main>
   <div class="column">
@@ -34,9 +19,7 @@
           spellcheck="false"
           rows="4"
           aria-label="Pole edycji: O mnie"
-        ><?php
-            echo $res["description"]
-        ?></textarea>
+><?php echo View::escape($description); ?></textarea>
         <button type="submit" class="big-button" style="margin-top:14px">
             Zapisz <span class="ms">check</span>
        </button>
@@ -44,7 +27,7 @@
     </div>
   </div>
   <?php
-    if ($id) {
+    if ($studentId) {
       ?>
       <div class="column">
         <div class="section progress-section">
@@ -77,7 +60,7 @@
   ?>
   <div class="column">
     <?php
-      if ($id) {
+      if ($studentId) {
         ?>
         <div class="section homework-section">
           <div class="card-icon">

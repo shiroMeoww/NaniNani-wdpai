@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img" aria-labelledby="title">
+  <title>Kenji Sato</title>
+  <rect width="320" height="240" rx="24" fill="#E8F0EB" />
+  <circle cx="160" cy="88" r="56" fill="#EED9BF" />
+  <path d="M108 114c10-32 102-32 112 0" fill="#181919" />
+  <path d="M108 114c8 30 38 44 72 44s64-14 72-44" fill="#040404" opacity="0.14" />
+  <path d="M108 120c0 18 26 32 56 32s56-14 56-32" fill="#EED9BF" />
+  <circle cx="134" cy="100" r="6" fill="#1B1918" />
+  <circle cx="186" cy="100" r="6" fill="#1B1918" />
+  <path d="M124 132c12 10 40 10 52 0" stroke="#47382D" stroke-width="4" fill="none" stroke-linecap="round" />
+  <path d="M102 152c28-28 92-28 120 0" fill="#D9C1A7" />
+  <path d="M104 146c28-24 92-24 120 0" fill="#EED9BF" />
+  <path d="M160 74c-14 0-26 14-26 32v6h52v-6c0-18-12-32-26-32z" fill="#EED9BF" />
+  <path d="M120 114c16 6 44 8 80 0" stroke="#040404" stroke-width="6" fill="none" stroke-linecap="round" />
+  <path d="M110 104c16-10 38-12 56-8" stroke="#040404" stroke-width="6" fill="none" stroke-linecap="round" />
+</svg>

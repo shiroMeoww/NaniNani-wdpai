@@ -1,25 +1,20 @@
+<?php
+// Controller passes variables: $page and $pagePath
+?>
 <main class="image">
   <div class="main">
-    <?php
-      if (is_numeric($_GET["page"])) {
-    ?>
     <section class="level-hero">
       <nav class="level-nav">
-        <?php
-          for ($i = 1; $i <= 5; $i ++) {
-            echo "<a href=\"/level.php?page=" . $i . "\"";
-            if ($i == $_GET["page"]) {
-              echo " class=\"active\"";
-            }
-            echo ">N" . $i . "</a>"; 
-          }
-        ?>
+        <?php for ($i = 1; $i <= 5; $i++): ?>
+          <a href="/level.php?page=<?php echo $i; ?>"<?php echo $page === (string)$i ? ' class="active"' : ''; ?>>N<?php echo $i; ?></a>
+        <?php endfor; ?>
       </nav>
     </section>
     <?php
-        require "./levels/n" . $_GET["page"] . ".php";
+      if ($pagePath !== null) {
+          require $pagePath;
       } else {
-        require "./levels/" . $_GET["page"] . ".php";
+          echo '<div class="empty-state">Nieprawidłowy poziom.</div>';
       }
     ?>
   </div>

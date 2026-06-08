@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img" aria-labelledby="title">
+  <title>Sara Pietrzak</title>
+  <rect width="320" height="240" rx="24" fill="#FFF1E8" />
+  <circle cx="160" cy="88" r="56" fill="#F6D2BE" />
+  <path d="M118 100c16-36 88-36 104 0" fill="#2B1E1E" />
+  <path d="M118 100c12 24 26 34 52 34s40-10 52-34" fill="#1C1413" opacity="0.18" />
+  <path d="M108 120c0 20 28 36 56 36s56-16 56-36" fill="#F6D2BE" />
+  <circle cx="132" cy="102" r="6" fill="#2B1E1E" />
+  <circle cx="188" cy="102" r="6" fill="#2B1E1E" />
+  <path d="M124 132c10 10 36 10 46 0" stroke="#6D3B2E" stroke-width="4" fill="none" stroke-linecap="round" />
+  <path d="M112 142c32 22 80 22 112 0" stroke="#D99B85" stroke-width="16" fill="none" stroke-linecap="round" />
+  <path d="M100 144c26-20 94-20 120 0" fill="#F6D2BE" />
+  <path d="M122 78c16-10 42-10 58 0" stroke="#2B1E1E" stroke-width="6" fill="none" stroke-linecap="round" />
+  <path d="M110 104c10 6 24 8 34 0" stroke="#2B1E1E" stroke-width="4" fill="none" stroke-linecap="round" />
+  <path d="M164 104c10 6 24 8 34 0" stroke="#2B1E1E" stroke-width="4" fill="none" stroke-linecap="round" />
+  <path d="M82 154c14-28 64-36 104-20 40-16 90-8 104 20" fill="#F8CFC1" />
+</svg>

@@ -150,9 +150,12 @@
 
 .days-grid div:hover,
 .course-grid div:hover,
+.hour-options div:hover {
+  background-color: rgba(217, 217, 217, 0.95);
+}
+
 .days-grid div.selected,
 .course-grid div.selected,
-.hour-options div:hover,
 .hour-options div.selected {
   background-color: var(--primary-red);
   color: #fff;

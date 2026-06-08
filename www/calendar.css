@@ -105,7 +105,107 @@ main {
 .actions a.join { background:var(--primary-red); color:#fff; }
 .actions a:hover { filter: brightness(.95); }
 
+@media(max-width:1200px){
+  .calendar-header{gap:14px;}
+}
+
 @media(max-width:768px){
+  .calendar-page{padding:16px;}
+  .calendar-header{flex-wrap:wrap;}
+  .calendar-header h1{font-size:24px;}
+  .nav-btn{font-size:24px;padding:8px;}
   .calendar-grid{ gap:3px; }
-  .day{ min-height:80px; font-size:12px; }
+  .day{ min-height:78px; font-size:12px; }
+  .day .actions{position:static;transform:none;box-shadow:none;width:100%;padding:10px 0;}
+  .day:hover .actions{display:flex;}
+  .actions a{width:100%;}
+}
+
+@media(max-width:520px){
+  .calendar-header h1{font-size:20px;}
+  .day{min-height:70px;}
+}
+
+.booking-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+}
+
+.booking-modal.hidden {
+  display: none;
+}
+
+.booking-panel {
+  background: #fff;
+  padding: 24px;
+  border-radius: 18px;
+  width: min(400px, 90%);
+  box-shadow: 0 20px 50px rgba(0,0,0,.16);
+  position: relative;
+}
+
+.booking-panel h2 {
+  margin: 0 0 18px;
+  font-size: 22px;
+  color: #222;
+}
+
+.booking-panel label {
+  display: block;
+  margin-bottom: 14px;
+  font-size: 14px;
+  color: #444;
+}
+
+.booking-panel input,
+.booking-panel select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin-top: 6px;
+  font-size: 14px;
+}
+
+.booking-error {
+  color: #a92525;
+  min-height: 20px;
+  margin-bottom: 14px;
+}
+
+.booking-warning {
+  color: #8a6d1f;
+  background: #fff5cc;
+  padding: 8px 10px;
+  border-radius: 10px;
+  margin: 0 0 14px;
+  font-size: 13px;
+}
+
+.btn-book {
+  width: 100%;
+  background: var(--primary-red);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.close-modal {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  border: none;
+  background: transparent;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
 }

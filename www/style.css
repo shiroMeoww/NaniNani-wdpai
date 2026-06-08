@@ -73,7 +73,6 @@ main {
   height: 80px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding: 0 28px;
   background: var(--bg);
   box-shadow: 0 1px 0 rgba(0,0,0,.12);
@@ -82,12 +81,20 @@ main {
 .logo {
   color: var(--primary-red);
   font-size: 26px;
-  font-weight: 600;
+  font-weight: 700;
+  letter-spacing: 0.03em;
 }
 
 .nav-links {
   display: flex;
   gap: 32px;
+  margin-left: 24px;
+}
+
+.nav-buttons {
+  margin-left: auto;
+  display: flex;
+  gap: 14px;
 }
 
 .nav-links a {
@@ -95,29 +102,31 @@ main {
   text-decoration: none;
   font-weight: 500;
   position: relative;
-  padding-bottom: 6px;
+  padding: 10px 14px 8px;
   font-size: 18px;
-  transition: color .2s ease;
+  border-radius: 999px;
+  transition: color .2s ease, background .2s ease, transform .2s ease;
 }
 
-.nav-links a:hover,
+.nav-links a:hover {
+  color: var(--primary-red);
+  background: rgba(234, 69, 76, 0.08);
+}
+
 .nav-links a.active {
   color: var(--primary-red);
+  background: rgba(234, 69, 76, 0.13);
 }
 
 .nav-links a.active::after {
   content: "";
   position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
+  left: 12px;
+  right: 12px;
+  bottom: 6px;
   height: 2px;
   background: var(--primary-red);
-}
-
-.nav-buttons {
-  display: flex;
-  gap: 14px;
+  border-radius: 2px;
 }
 
 .btn-account,
@@ -147,9 +156,16 @@ main {
   background: transparent;
 }
 .btn-login {
-  border: 1px solid #2200FF;
-  color: #2200FF;
-  background: transparent;
+  border: none;
+  color: #fff;
+  background: var(--primary-red);
+  box-shadow: 0 12px 30px rgba(234, 69, 76, 0.16);
+}
+.btn-login:hover {
+  background: var(--red-strong);
+}
+.btn-login:active {
+  transform: translateY(1px);
 }
 .btn-logout:hover { background: rgba(10,21,122,.06); }
 .btn-logout:active { transform: translateY(1px); }
